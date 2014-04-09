@@ -1,3 +1,7 @@
+/**
+ * author: Sergej Schefer
+ * */
+
 function checkRegister(input){
     alert(input);
 }
