@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link href="style.css" type="text/css" rel="stylesheet" />
+<script src="js/register.js"></script>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form name="register" action="newsletter.php" method="POST">
+            <div class="formtext">First name:</div> <input type="text" name="firstname" onblur="checkIfEmpty(this.value, 'firstname')"> <div id="firstname"></div><br>
+            <div class="formtext">Last name:</div> <input type="text" name="lastname" onblur="checkIfEmpty(this.value, 'lastname')"> <div id="lastname"></div><br>
+            <div class="formtext">Username:</div> <input type="text" name="username" onblur="checkIfEmpty(this.value, 'username')"> <div id="username"></div><br>
+            <div class="formtext">E-Mail:</div> <input type="text" name="email" onblur="checkEmail(this.value, 'email')"> <div id="email"></div><br>
+            <div class="formtext">Phone:</div> <input type="text" name="phone" onblur="checkNumbers(this.value, 'phone')"> <div id="phone"></div><br>
+            <input type="checkbox" name="politics" value="Politics"> Politics <br>
+            <input type="checkbox" name="sports" value="Sports"> Sports <br>
+            <input type="radio" name="frequency" value="daily"> daily <br>
+            <input type="radio" name="frequency" value="weekly"> weekly <br>
+            <input type="submit" name="submit" value="Get Newsletter" onclick="checkRadiobuttons('firstname')"> <br>
+        </form>
+    </div>
+</body>
+</html>

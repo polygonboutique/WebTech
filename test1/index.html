@@ -1,0 +1,26 @@
+<!--
+author: Sergej Schefer
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="game.js"></script>
+    <title>17 und 4</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="gamewindow">
+            <div id="gamecontent">
+                <span class="gametext">Ihre Karten: </span> <span id="cards"></span>
+                <br>
+                <span class="gametext">Ihr Punktestand: </span> <span id="points"></span>
+                <br> <br>
+                <input id="newcard" type="submit" value="Neue Karte" onclick="gameStep()">
+                <input type="submit" value="Neues Spiel" onclick="startGame()">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
