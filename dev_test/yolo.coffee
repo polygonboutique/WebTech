@@ -6,4 +6,4 @@ alert "yolo" if b?
 
 yolo = (boolean) -> (alert boolean; return)
 
-yolo()
+yolo(b)

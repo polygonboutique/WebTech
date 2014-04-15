@@ -12,6 +12,6 @@
     alert(boolean);
   };
 
-  yolo();
+  yolo(b);
 
 }).call(this);
