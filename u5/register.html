@@ -1,0 +1,56 @@
+<!--
+/**
+ Copyright (c) 2013, Sergej Schefer
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ 1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ 3. All advertising materials mentioning features or use of this software
+ must display the following acknowledgement:
+ This product includes software developed by Sergej Schefer.
+ 4. Neither the name of Sergej Schefer nor the
+ names of its contributors may be used to endorse or promote products
+ derived from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY SERGEJ SCHEFER ''AS IS'' AND ANY
+ EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL SERGEJ SCHEFER BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ -->
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link href="style.css" type="text/css" rel="stylesheet" />
+<script src="js/register.js"></script>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form name="register" action="newsletter.php" method="POST">
+            <div class="formtext">First name:</div> <input type="text" name="firstname" onblur="checkIfEmpty(this.value, 'firstname')"> <div id="firstname"></div><br>
+            <div class="formtext">Last name:</div> <input type="text" name="lastname" onblur="checkIfEmpty(this.value, 'lastname')"> <div id="lastname"></div><br>
+            <div class="formtext">Username:</div> <input type="text" name="username" onblur="checkIfEmpty(this.value, 'username')"> <div id="username"></div><br>
+            <div class="formtext">E-Mail:</div> <input type="text" name="email" onblur="checkEmail(this.value, 'email')"> <div id="email"></div><br>
+            <div class="formtext">Phone:</div> <input type="text" name="phone" onblur="checkNumbers(this.value, 'phone')"> <div id="phone"></div><br>
+            <input type="checkbox" name="politics" value="Politics"> Politics <br>
+            <input type="checkbox" name="sports" value="Sports"> Sports <br>
+            <input type="radio" name="frequency" value="daily"> daily <br>
+            <input type="radio" name="frequency" value="weekly"> weekly <br>
+            <input type="submit" name="submit" value="Get Newsletter" onclick="checkRadiobuttons('firstname')"> <br>
+        </form>
+    </div>
+</body>
+</html>
