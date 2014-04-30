@@ -48,6 +48,19 @@ if(isset($_POST['submit'])){
     $emailclass = "form-ok";
     $phoneclass = "form-ok";
 
+    $politicsBox = isset($_POST['politics']) ? "checked = 'checked'" : "";
+    $sportsBox = isset($_POST['sports']) ? "checked = 'checked'" : "";
+
+
+    if($_POST['frequency'] === "daily"){
+        $dailyBox = "checked = 'checked'";
+    }else if($_POST['frequency'] === "weekly"){
+        $weeklyBox = "checked = 'checked'";
+    }else{
+        $dailyBox = "";
+        $weeklyBox = "";
+    }
+
     $firstnamecontent = $_POST['firstname'];
     $lastnamecontent = $_POST['lastname'];
     $usernamecontent = $_POST['username'];
@@ -112,11 +125,11 @@ if(isset($_POST['submit'])){
         <div class="formtext">Username:</div> <input type="text" name="username" value="<?php echo $usernamecontent ?>""><div id="username" class=<?php echo $usernameclass?>> <?php echo $username ?> </div><br>
         <div class="formtext">E-Mail:</div> <input type="text" name="email" value="<?php echo $emailcontent ?>"><div id="email" class=<?php echo $emailclass?>> <?php echo $email ?> </div><br>
         <div class="formtext">Phone:</div> <input type="text" name="phone"  value="<?php echo $phonecontent ?>"><div id="phone" class=<?php echo $phoneclass?>> <?php echo $phone ?> </div><br>
-        <input type="checkbox" name="politics" value="Politics"> Politics <br>
-        <input type="checkbox" name="sports" value="Sports"> Sports <br>
-        <input type="radio" name="frequency" value="daily"> daily <br>
-        <input type="radio" name="frequency" value="weekly"> weekly <br>
-        <input type="submit" name="submit" value="Get Newsletter" onclick="checkRadiobuttons('firstname')"> <br>
+        <input type="checkbox" name="politics" value="Politics" <?php echo $politicsBox ?>> Politics <br>
+        <input type="checkbox" name="sports" value="Sports" <?php echo $sportsBox ?>> Sports <br>
+        <input type="radio" name="frequency" value="daily" <?php echo $dailyBox ?>> daily <br>
+        <input type="radio" name="frequency" value="weekly" <?php echo $weeklyBox ?>> weekly <br>
+        <input type="submit" name="submit" value="Get Newsletter"> <br>
     </form>
 </div>
 </body>
